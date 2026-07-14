@@ -217,5 +217,5 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Ignore raw downloaded files
+# Ignore raw downloaded PDF files
 data/raw/**/*.pdf
