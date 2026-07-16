@@ -30,6 +30,11 @@ def main() -> None:
         db = client[DB_NAME]
         collection = db[COLLECTION_NAME]
 
+        existing_count = collection.count_documents({})
+        if existing_count > 0:
+            print(f"Collection already has {existing_count} documents - clearing before re-import")
+            collection.delete_many({})
+
         result = collection.insert_many(documents)
 
         print(
@@ -53,5 +58,5 @@ def main() -> None:
         client.close()
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
