@@ -109,7 +109,7 @@ def build_documents() -> list[dict]:
             continue
 
         document = {
-            "company_id": "SRU-UN.TO",
+            "company_id": "smartcentres",
             "source": "smartcentres.com",
             "doc_type": infer_doc_type(pdf_path.name),
             "title": pdf_path.stem.replace("-", " "),
