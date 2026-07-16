@@ -1,3 +1,19 @@
+"""
+acquisition/sedar_pdf_to_json.py
+
+Parses SEDAR+ MD&A filings into MongoDB-ready JSON documents.
+
+Note: SEDAR+ has no public API, so the source PDFs in data/raw/sedar/
+were downloaded manually from https://www.sedarplus.ca (SmartCentres REIT
+profile), rather than pulled by a script. This is a known, expected
+limitation of this source - documented in the group's data source plan.
+
+Documents used (manually retrieved, July 2026):
+- SmartCentres Annual MD&A, fiscal year 2024
+- SmartCentres Annual MD&A, fiscal year 2025
+- SmartCentres Q1 2026 Interim MD&A
+"""
+
 from __future__ import annotations
 
 import json
@@ -50,9 +66,12 @@ def extract_pdf_text(pdf_path: Path) -> tuple[str, int]:
 
 def build_documents() -> list[dict]:
     """Convert all local SEDAR+ PDFs into MongoDB-ready documents."""
-    documents: list[dict] = []
+    pdf_files = sorted(INPUT_FOLDER.glob("*.pdf"))
+    if not pdf_files:
+        print(f"WARNING: no PDF files found in {INPUT_FOLDER} - did you run the acquisition step first?")
 
-    for pdf_path in sorted(INPUT_FOLDER.glob("*.pdf")):
+    documents: list[dict] = []
+    for pdf_path in pdf_files:
         print(f"Processing: {pdf_path.name}")
 
         try:
@@ -66,7 +85,7 @@ def build_documents() -> list[dict]:
             continue
 
         document = {
-            "company_id": "SRU-UN.TO",
+            "company_id": "smartcentres",
             "company_name": "SmartCentres Real Estate Investment Trust",
             "source": "SEDAR+",
             "document_type": infer_document_type(pdf_path.name),
