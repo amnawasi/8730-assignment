@@ -79,6 +79,12 @@ def get_news(ticker=TICKER):
     """
     Pulls recent news headlines - unstructured text. Returns a list of
     dicts, one per headline, ready to insert into MongoDB.
+
+    Note: yfinance nests news fields under a "content" key (title,
+    provider.displayName, canonicalUrl.url) rather than at the top level -
+    this was a source of a real bug caught during cleaning, where all
+    headlines came back empty because the old code read top-level fields
+    that no longer existed.
     """
     try:
         tkr = yf.Ticker(ticker)
@@ -87,12 +93,14 @@ def get_news(ticker=TICKER):
             raise ValueError("yfinance returned no news data")
         docs = []
         for item in news_items:
+            content = item.get("content", item)  # fallback if structure changes again
+            provider = content.get("provider", {})
             docs.append({
                 "company_id": COMPANY_ID,
                 "source": "yfinance_news",
-                "headline": item.get("title", ""),
-                "publisher": item.get("publisher", ""),
-                "link": item.get("link", ""),
+                "headline": content.get("title", ""),
+                "publisher": provider.get("displayName", "") if isinstance(provider, dict) else "",
+                "link": content.get("canonicalUrl", {}).get("url", ""),
                 "pulled_at": datetime.now().isoformat(),
             })
         print(f"[news] Pulled {len(docs)} headlines for {ticker}")
