@@ -67,18 +67,77 @@ def connect_to_mongodb(uri):
 
 
 # ============================================================
-# STEP 2 — Text Cleaning Function
+# STEP 2 — TOC Stripping Function
 # ============================================================
 
-def clean_text(text):
+def strip_table_of_contents(text):
+    """
+    Strips the jumbled table of contents block that appears at the
+    start of SEDAR PDF documents.
+
+    The TOC is a one-time block per document — not a repeated header —
+    so it cannot be caught by the repeated pattern removal.
+
+    It looks like a run of section headings and page numbers with no
+    real sentence structure before the actual MD&A content begins.
+
+    Strategy:
+    - Search for known anchor phrases that mark the START of real content
+    - Slice the text from that position onward
+    - This works even when the text has no clear line breaks
+    """
+    if not text or not isinstance(text, str):
+        return text
+
+    # Known anchor phrases that mark the START of real content
+    # in SEDAR MD&A documents — these are the first real sentences
+    # after the jumbled TOC block
+    content_anchors = [
+        "This Management's Discussion and Analysis",
+        "This MD&A should be read",
+        "sets out SmartCentres",
+        "MANAGEMENT'S DISCUSSION AND ANALYSIS FOR THE YEAR",
+        "MANAGEMENT'S DISCUSSION AND ANALYSIS FOR THE THREE",
+        "About this Management's Discussion",
+    ]
+
+    best_position = len(text)  # Start with end of text as default
+
+    for anchor in content_anchors:
+        pos = text.find(anchor)
+        if pos != -1 and pos < best_position:
+            best_position = pos
+
+    # If we found an anchor before 20% into the text, strip before it
+    threshold = len(text) * 0.20
+    if best_position < threshold and best_position > 0:
+        chars_removed = best_position
+        print(f"    TOC stripped: removed {chars_removed} characters from the start")
+        return text[best_position:]
+
+    # If no anchor found near the start, return text unchanged
+    print(f"    TOC strip: no TOC detected, text unchanged")
+    return text
+
+
+# ============================================================
+# STEP 3 — Text Cleaning Function
+# ============================================================
+
+def clean_text(text, strip_toc=False):
     """
     Cleans raw PDF-extracted text by:
+    - Optionally stripping the table of contents (for SEDAR docs)
     - Removing extra whitespace and blank lines
     - Removing repeated headers and footers (page numbers, report titles)
     - Stripping leading and trailing whitespace
     """
     if not text or not isinstance(text, str):
         return ""
+
+    # Strip TOC block if requested (SEDAR documents only)
+    if strip_toc:
+        text = strip_table_of_contents(text)
 
     # Remove repeated headers and footers commonly found in SEDAR PDF extractions
     # These are phrases that appear on almost every page
@@ -190,8 +249,9 @@ def clean_sedar_documents(db):
                 print(f"    WARNING: Could not extract year from filename: {filename}")
 
         # --- Clean the text ---
+        # strip_toc=True removes the jumbled TOC block at the start of SEDAR docs
         raw_text    = doc.get("text", "")
-        clean_text_ = clean_text(raw_text)
+        clean_text_ = clean_text(raw_text, strip_toc=True)
 
         # --- Check for missing required fields ---
         required = ["company_id", "source", "filename", "text"]
