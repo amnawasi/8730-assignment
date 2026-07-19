@@ -28,3 +28,12 @@ _To be completed._
 - wowa.ca — REIT peer comparison table
 - Bank of Canada Valet API — interest rates (series V39079)
 - SEDAR+ — filings and MD&A excerpts
+
+## Instructor Access
+- Instructor GitHub: @elsharif-UWindsor
+- Added as collaborator with read access to this private repository
+
+## Repository
+- Repository name: 8730-assignment
+- Visibility: Private
+
