@@ -1,0 +1,156 @@
+
+MONGODB INSIGHTS SUMMARY — SMART CENTRES REIT
+Author: Muhammad Ahmad
+Date: July 2026
+Database: MongoDB Atlas — smartcentres
+
+============================================================
+1. COMPANY FUNDAMENTALS (from yfinance fundamentals collection)
+============================================================
+
+Company         : SmartCentres Real Estate Investment Trust
+Ticker          : SRU-UN.TO
+Sector          : Real Estate
+Industry        : REIT - Retail
+
+INVESTMENT METRICS:
+  Current Price     : $30.33 CAD
+  Market Cap        : $5,954,195,968 CAD
+  Dividend Yield    : 6.1%
+  Dividend Rate     : $1.85 per unit
+  Payout Ratio      : 86.42%
+  5-Year Avg Yield  : 7.02%
+  Beta              : 0.85 (market sensitivity)
+
+VALUATION:
+  Trailing P/E      : 14.172896
+  Price to Book     : 0.83347076
+  Book Value        : $36.39
+  52-Week Low       : $25.01
+  52-Week High      : $30.9
+  52-Week Change    : 17.6%
+
+FINANCIAL HEALTH:
+  Total Debt        : $5,270,611,968 CAD
+  Debt to Equity    : 82.388%
+  Total Revenue     : $938,992,000 CAD
+  EBITDA            : $551,193,984 CAD
+  Operating Margin  : 55.64%
+  Profit Margin     : 38.87%
+  Return on Equity  : 7.12%
+  Return on Assets  : 2.81%
+
+PORTFOLIO:
+  Occupancy         : 97.6%
+  Properties        : 200 locations
+  Total Space       : 35.5 million sq ft
+
+ANALYST COVERAGE:
+  Target Price      : $29.72222 CAD
+  Analyst Opinions  : 9
+  Recommendation    : none
+
+============================================================
+2. NEWS SENTIMENT (from yfinance news_headlines collection)
+============================================================
+
+Total Headlines: 10
+
+Sentiment Breakdown:
+sentiment
+Positive    9
+Neutral     1
+
+Theme Breakdown:
+theme
+Valuation          3
+Income/Dividend    2
+Earnings           2
+Analyst Rating     1
+Governance         1
+Returns            1
+
+Key Headlines:
+
+  [Positive] A Look At SmartCentres REIT (TSX:SRU.UN) Valuation After Recent Share Price Momentum
+  [Positive] SmartCentres Real Estate Investment Trust (CWYUF) Upgraded to Strong Buy: What Does It Mean for the Stock?
+  [Neutral] Will New Long‑Term Leadership and Governance Deals With Penguin Group Change SmartCentres' (TSX:SRU.UN) Narrative
+  [Positive] Best Income Stocks to Buy for April 1st
+  [Positive] Best Income Stocks to Buy for March 30th
+  [Positive] A Look At SmartCentres REIT (TSX:SRU.UN) Valuation After Its Recent Share Price Momentum
+  [Positive] Is It Too Late To Consider SmartCentres REIT (TSX:SRU.UN) After Strong Multi‑Year Returns
+  [Positive] SmartCentres Real Estate Investment Trst Q4 Earnings Call Highlights
+  [Positive] SmartCentres Real Estate Investment Trust (CWYUF) Q4 2025 Earnings Call Highlights: Strong NOI ...
+  [Positive] A Look At SmartCentres Real Estate Investment Trust (TSX:SRU.UN) Valuation After Recent Share Price Momentum
+
+============================================================
+3. SEDAR DOCUMENTS KEY EXCERPTS
+============================================================
+
+Total excerpts extracted: 41
+Documents analyzed: 3 (Annual MD&A 2024, 2025, Q1 2026)
+
+Themes found: occupancy, NOI, interest_rate, debt, dividend, development
+
+
+OCCUPANCY:
+  [2024] ft.) 35,300 35,045 34,750 In-place and committed occupancy rate 98.7 % 98.5 % 98.0 % Average lease term to maturity (in years) 4.2 4.3 4.2 In-place net retail rental rate excluding Anchors (per occupi...
+  [2024] ft.) 35,300 35,045 34,750 In-place and committed occupancy rate 98.7 % 98.5 % 98.0 % Average lease term to maturity (in years) 4.2 4.3 4.2 In-place net retail rental rate excluding Anchors (per occupi...
+
+NOI:
+  [2024] The following terms are non-GAAP measures used in this MD&A: Adjusted Debt, Adjusted Funds From Operations (“AFFO”), AFFO with adjustments, AFFO per Unit, AFFO with adjustments per Unit, Net Debt, Adj...
+  [2024] MANAGEMENT’S DISCUSSION AND ANALYSIS December 31, 2024 2024 YEAR-END REPORT SMARTCENTRES REAL ESTATE INVESTMENT TRUST | 2024 FIRST QUARTER REPORT 2 Proportionately Consolidated Balance Sheets Investme...
+
+INTEREST_RATE:
+  [2024] ft.) $23.48 $22.59 $22.20 Financial Information Total assets(2) 11,939,689 11,905,422 11,702,153 Investment properties(2) 10,659,783 10,564,269 10,286,891 Total unencumbered assets(3) 9,464,521 9,170,...
+  [2024] a) Investment properties Judgment is applied in determining whether certain costs are additions to the carrying amount of an investment property and, for properties under development, identifying the ...
+
+DEBT:
+  [2024] Section VIII — Financing and Capital Resources, “Financial Covenants” Fixed Rate to Variable Rate Debt Ratio Fixed Rate to Variable Rate Debt Ratio is defined as the percentage of Fixed Rate Debt out ...
+  [2024] MANAGEMENT’S DISCUSSION AND ANALYSIS December 31, 2024 2024 YEAR-END REPORT SMARTCENTRES REAL ESTATE INVESTMENT TRUST | 2024 FIRST QUARTER REPORT 2 Proportionately Consolidated Balance Sheets Investme...
+
+DIVIDEND:
+  [2024] MANAGEMENT’S DISCUSSION AND ANALYSIS December 31, 2024 2024 YEAR-END REPORT SMARTCENTRES REAL ESTATE INVESTMENT TRUST | 2024 FIRST QUARTER REPORT 2 Proportionately Consolidated Balance Sheets Investme...
+  [2025] Canada’s Shopping Centre 2025 YEAR-END REPORT MANAGEMENT’S DISCUSSION AND ANALYSIS December 31, 2025 Management’s Discussion and Analysis Section I — Introduction About this Management’s Discussion an...
+
+DEVELOPMENT:
+  [2024] MANAGEMENT’S DISCUSSION AND ANALYSIS December 31, 2024 2024 YEAR-END REPORT SMARTCENTRES REAL ESTATE INVESTMENT TRUST | 2024 FIRST QUARTER REPORT 2 Proportionately Consolidated Balance Sheets Investme...
+  [2024] Development • Significant development pipeline is expected to provide long-term portfolio expansion and profitable growth from the approximately 59.1 million square feet (at the Trust’s share) of zone...
+
+============================================================
+4. INVESTOR DOCUMENTS KEY EXCERPTS
+============================================================
+
+Total excerpts extracted: 59
+Documents analyzed: 10 (Press releases, AIF, Annual report, Q1 docs)
+
+Themes found: FFO, occupancy, NOI, distribution, development, guidance
+
+
+FFO:
+  [2025] [quarterly_report] • FFO per Unit (1) and FFO with adjustments per Unit (1) for the three months ended March 31, 2026, were $0.54 and $0.52, respectively, compared to $0.56 and $0.54 for the same period in 2025....
+  [2025] [annual_information_form] For greater certainty, for purposes of this definition, the cost of investment properties includes initial direct leasing costs that are added to investment properties under GAAP; “DBRS” means DBRS Li...
+
+OCCUPANCY:
+  [2025] [quarterly_report] 2026 First Quarter Highlights Retail Operations • In-place and committed occupancy rate of 97.6% as of March 31, 2026 or 98.0% as of today ....
+  [2025] [quarterly_report] ft.) 35,543 35,585 35,425 In-place and committed occupancy rate 97.6 % 98.6 % 98.4 % Average lease term to maturity (in years) 4.3 4.3 4.3 In-place net retail rental rate excluding Anchors (per occupi...
+
+NOI:
+  [2025] [quarterly_report] Financial • Net operating income for the three months ended March 31, 2026 was $137.7 million, representing an increase of $0.9 million, or 0.7%, as compared to the same period in 2025....
+  [2025] [quarterly_report] • Strong tenant base and customer traffic continued to drive Same Properties NOI (1) growth for the three months ended March 31, 2026, which increased by 1....
+
+DISTRIBUTION:
+  [2025] [quarterly_report] The payout ratio to AFFO is calculated as declared distributions divided by AFFO....
+  [2025] [annual_information_form] 10 CASH DISTRIBUTIONS ............................................................................................................................................
+
+DEVELOPMENT:
+  [2025] [quarterly_report] On the development front, a program of new retail development is gaining momentum at SmartCentres....
+  [2025] [quarterly_report] We expect construction to begin later this year in Kingston and Winnipeg....
+
+GUIDANCE:
+  [2025] [annual_information_form] All statements other than statements of historical fact contained in this annual information form are forward-looking statements including, without limitation, statements that contain words such as “c...
+  [2025] [annual_report] The Trust calculates AFFO in accordance with the recommendations of the guidance set out in the REALPAC White Paper....
+
+============================================================
+END OF MONGODB INSIGHTS SUMMARY
+============================================================
