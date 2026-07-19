@@ -69,6 +69,7 @@ def chart_price_vs_rate():
 # 3. Dividend yield vs peers (bar) - the recommendation chart
 def chart_peer_yield():
     df = pd.read_csv(OUT / "peer_yield_comparison.csv").sort_values("dividend_yield_pct", ascending=False)
+    df["dividend_yield_pct"] = df["dividend_yield_pct"] / 100
     colors = [ORANGE if "SRU" in str(s).upper() else BLUE for s in df["symbol"]]
     fig, ax = plt.subplots()
     ax.bar(df["symbol"], df["dividend_yield_pct"], color=colors)
