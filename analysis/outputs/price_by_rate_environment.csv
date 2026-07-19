@@ -1,0 +1,4 @@
+rate_environment,avg_stock_price,min_stock_price,max_stock_price,trading_days
+"Rising (1% to 3%)",24.06,15.24,30.54,479
+"High (above 3%)",20.68,17.39,24.04,629
+"Very Low (below 1%)",18.26,9.54,24.46,522
