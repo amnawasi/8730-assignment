@@ -40,6 +40,8 @@ documents) is stored in **MongoDB Atlas**, linked to the MySQL data by a shared
 
 **`data/processed/`** — cleaned/validated output, ready for database loading (`smartcentres/`, `sedar/`)
 
+**`analysis/`** - contains the output for the analysis with the charts (`outputs/`)
+
 **`.env`** — local credentials (never committed — see Environment Setup below)
 
 ## Environment Setup
