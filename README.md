@@ -21,34 +21,26 @@ documents) is stored in **MongoDB Atlas**, linked to the MySQL data by a shared
 `company_id` field.
 
 ## Repository Structure
-acquisition/                     # All data acquisition, cleaning, and loading scripts
-yfinance_pull.py                 # Price history, fundamentals, news (SmartCentres)
-wowa_scraping.py                 # REIT type categorization + current peer metrics
-interest_rate_pull.py            # Bank of Canada overnight rate
-inflation_cpi_pull.py            # Bank of Canada CPI
-smartcentres_documents_pull.py   # Company site PDF scraper
-smartcentres_pdf_to_json.py      # Company site PDF -> JSON
-sedar_pdf_to_json.py             # SEDAR+ PDF -> JSON
-save_raw_data.py                 # Saves yfinance + wowa raw pulls to data/raw/
-process_market_data.py           # Cleans fundamentals/news -> data/processed/
-load_mysql.py                    # Loads all structured CSVs into MySQL
-import_investor_documents.py     # Loads investor_documents into MongoDB
-import_sedar_documents.py        # Loads sedar_documents into MongoDB
-import_market_data.py            # Loads fundamentals/news into MongoDB
+**`acquisition/`** — all data acquisition, cleaning, and loading scripts
+- `yfinance_pull.py` — price history, fundamentals, news (SmartCentres)
+- `wowa_scraping.py` — REIT type categorization + current peer metrics
+- `interest_rate_pull.py` — Bank of Canada overnight rate
+- `inflation_cpi_pull.py` — Bank of Canada CPI
+- `smartcentres_documents_pull.py` — company site PDF scraper
+- `smartcentres_pdf_to_json.py` — company site PDF to JSON
+- `sedar_pdf_to_json.py` — SEDAR+ PDF to JSON
+- `save_raw_data.py` — saves yfinance + wowa raw pulls to `data/raw/`
+- `process_market_data.py` — cleans fundamentals/news to `data/processed/`
+- `load_mysql.py` — loads all structured CSVs into MySQL
+- `import_investor_documents.py` — loads investor documents into MongoDB
+- `import_sedar_documents.py` — loads SEDAR+ documents into MongoDB
+- `import_market_data.py` — loads fundamentals/news into MongoDB
 
-data/
-raw/                             # Untouched acquisition output
-smartcentres/
-peers/
-bank_of_canada/
+**`data/raw/`** — untouched acquisition output (`smartcentres/`, `peers/`, `bank_of_canada/`)
 
-processed/                       # Cleaned/validated output, ready for database loading
-smartcentres/
-sedar/
+**`data/processed/`** — cleaned/validated output, ready for database loading (`smartcentres/`, `sedar/`)
 
-.env                             # Local credentials (never committed - see setup below)
-.gitignore
-README.md
+**`.env`** — local credentials (never committed — see Environment Setup below)
 
 ## Environment Setup
 **Requirements:**
